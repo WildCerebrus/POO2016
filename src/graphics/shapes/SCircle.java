@@ -12,11 +12,17 @@ public class SCircle extends Shape {
 		
 	}
 	
-	public Point getLoc() {
-		
-		return null;
+	public int getRadius() {
+		return radius;
 	}
-
+	
+	public void setRadius(int radius) {
+		this.radius=radius;
+	}
+	
+	public Point getLoc() {
+		return loc;
+	}
 	
 	public void setLoc(Point p) {
 			
