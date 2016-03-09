@@ -39,41 +39,51 @@ public class Controller implements MouseListener, MouseMotionListener, KeyListen
 	
 	public void mousePressed(MouseEvent e)
 	{
+		//TODO à faire
 	}
 
 	public void mouseReleased(MouseEvent e)
 	{
+		//TODO à faire
 	}
 
 	public void mouseClicked(MouseEvent e)
 	{
+		//TODO à faire
 	}
 	
 	public void mouseEntered(MouseEvent e)
 	{
+		//TODO à faire
 	}
 
 	public void mouseExited(MouseEvent e)
 	{
+		//TODO à faire
 	}
 	
 	public void mouseMoved(MouseEvent evt)
 	{
+		//TODO à faire
 	}
 	
 	public void mouseDragged(MouseEvent evt)
 	{
+		//TODO à faire
 	}
 	
 	public void keyTyped(KeyEvent evt)
 	{
+		//TODO à faire
 	}
 	
 	public void keyPressed(KeyEvent evt)
 	{
+		//TODO à faire
 	}
 
 	public void keyReleased(KeyEvent evt)
 	{
+		//TODO à faire
 	}
 }
