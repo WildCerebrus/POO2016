@@ -1,6 +1,5 @@
 package graphics.shapes.ui;
 
-import graphics.shapes.SCircle;
 import graphics.shapes.SCollection;
 import graphics.shapes.SRectangle;
 import graphics.shapes.SText;
@@ -8,6 +7,7 @@ import graphics.shapes.ShapeVisitor;
 import graphics.shapes.attributes.ColorAttributes;
 import graphics.shapes.attributes.FontAttributes;
 import graphics.shapes.attributes.SelectionAttributes;
+import graphics.shapes.SCircle;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

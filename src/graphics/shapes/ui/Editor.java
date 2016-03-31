@@ -1,15 +1,12 @@
 package graphics.shapes.ui;
 
-import graphics.shapes.SCircle;
 import graphics.shapes.SCollection;
-import graphics.shapes.SPeople;
-import graphics.shapes.SMan;
 import graphics.shapes.SRectangle;
 import graphics.shapes.SText;
-import graphics.shapes.SWoman;
 import graphics.shapes.attributes.ColorAttributes;
 import graphics.shapes.attributes.FontAttributes;
 import graphics.shapes.attributes.SelectionAttributes;
+import graphics.shapes.SCircle;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -26,7 +23,6 @@ public class Editor extends JFrame {
 	static SCollection model;
 	static String s = "";
 	static Scanner sc = new Scanner(System.in);
-	static SPeople people = null;
 
 	public Editor() {
 		super("Shapes Editor");
@@ -81,82 +77,6 @@ public class Editor extends JFrame {
 		Editor.model.add(sc);/**/
 
 	}
-	
-	public static void addMan(String arg) {
-		SMan P = new SMan();
-		people=P;
-		P.addAttributes(new ColorAttributes(true,false,Color.blue,Color.blue));
-		P.setBorder(new SRectangle(new Point(),100,50));
-		P.setFather(null);
-		P.setMother(null);
-		P.setName(arg.substring(1));
-		P.setNbchild(Integer.parseInt(arg.substring(0, 1)));
-		model.add(P);
-	}
-	
-	public static void addWoman(String arg) {
-		SWoman P = new SWoman();
-		people=P;
-		P.addAttributes(new ColorAttributes(true,false,Color.blue,Color.blue));
-		P.setBorder(new SCircle(new Point(),60));
-		P.setFather(null);
-		P.setMother(null);
-		P.setName(arg.substring(1));
-		P.setNbchild(Integer.parseInt(arg.substring(0, 1)));
-		model.add(P);
-	}
-	
-	public static void addMom(String arg) {
-		SWoman P = new SWoman();
-		P.addAttributes(new ColorAttributes(true,false,Color.blue,Color.blue));
-		P.setBorder(new SCircle(new Point(),60));
-		P.setFather(null);
-		P.setMother(null);
-		P.setName(arg.substring(1));
-		P.setNbchild(Integer.parseInt(arg.substring(0, 1)));
-		people.addMom(P,true);
-		model.add(P);
-		people=P;
-	}
-	
-	public static void addDad(String arg) {
-		SMan P = new SMan();
-		P.addAttributes(new ColorAttributes(true,false,Color.blue,Color.blue));
-		P.setBorder(new SRectangle(new Point(),100,50));
-		P.setFather(null);
-		P.setMother(null);
-		P.setName(arg.substring(1));
-		P.setNbchild(Integer.parseInt(arg.substring(0, 1)));
-		people.addDad(P,true);
-		model.add(P);
-		people=P;
-	}
-	
-	public static void addBoy(String arg) {
-		SMan P = new SMan();
-		P.addAttributes(new ColorAttributes(true,false,Color.blue,Color.blue));
-		P.setBorder(new SRectangle(new Point(),100,50));
-		P.setFather(null);
-		P.setMother(null);
-		P.setName(arg.substring(1));
-		P.setNbchild(Integer.parseInt(arg.substring(0, 1)));
-		people.addBoy(P,true);
-		model.add(P);
-		people=P;
-	}
-	
-	public static void addGirl(String arg) {
-		SWoman P = new SWoman();
-		P.addAttributes(new ColorAttributes(true,false,Color.blue,Color.blue));
-		P.setBorder(new SCircle(new Point(),60));
-		P.setFather(null);
-		P.setMother(null);
-		P.setName(arg.substring(1));
-		P.setNbchild(Integer.parseInt(arg.substring(0, 1)));
-		people.addGirl(P,true);
-		model.add(P);
-		people=P;
-	}
 
 	public static void main(String[] args) {
 		Editor self = new Editor();
@@ -164,17 +84,5 @@ public class Editor extends JFrame {
 		self.setVisible(true);
 		s=sc.next();
 		System.out.println(s.substring(0, 1));
-		if(!(s.equals(""))) {
-			s=s.toLowerCase();
-			switch (s.substring(0, 2)) {
-				case "ma" : addMan(s.substring(2));;
-				case "wo" : addWoman(s.substring(2));;
-				case "mo" : addMom(s.substring(2));;
-				case "da" : addDad(s.substring(2));;
-				case "bo" : addBoy(s.substring(2));;
-				case "gi" : addGirl(s.substring(2));;
-				}
-			s="";
-		}
 	}
 }
