@@ -25,7 +25,7 @@ public abstract class Shape {
 
 	public abstract Rectangle getBounds();
 
-	public abstract void accept(graphics.shapes.ShapeVisitor v);
+	public abstract void accept(ShapeVisitor v);
 
 	public TreeMap<String, Attributes> getAttributes() {
 		return attributes;
