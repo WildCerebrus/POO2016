@@ -2,9 +2,11 @@ package graphics.shapes.ui;
 
 import graphics.shapes.SCollection;
 import graphics.shapes.SRectangle;
+import graphics.shapes.SStar;
 import graphics.shapes.SText;
 import graphics.shapes.attributes.ColorAttributes;
 import graphics.shapes.attributes.FontAttributes;
+import graphics.shapes.attributes.RunAttributes;
 import graphics.shapes.attributes.SelectionAttributes;
 import graphics.shapes.SCircle;
 
@@ -36,7 +38,7 @@ public class Editor extends JFrame {
 		this.buildModel();
 
 		this.sview = new ShapesView(model);
-		this.sview.setPreferredSize(new Dimension(400, 300));
+		this.sview.setPreferredSize(new Dimension(800, 600));
 		this.getContentPane().add(this.sview, java.awt.BorderLayout.CENTER);
 	}
 
@@ -45,7 +47,7 @@ public class Editor extends JFrame {
 		model = new SCollection();
 		model.addAttributes(new SelectionAttributes());
 
-		SRectangle r = new SRectangle(new Point(60, 90), 100, 80);
+		/*SRectangle r = new SRectangle(new Point(60, 90), 100, 80);
 		r.addAttributes(new ColorAttributes(true, false, Color.BLUE, Color.BLUE));
 		r.addAttributes(new SelectionAttributes());
 		Editor.model.add(r);
@@ -75,7 +77,12 @@ public class Editor extends JFrame {
 		c.addAttributes(new SelectionAttributes());
 		sc.add(c);
 		Editor.model.add(sc);/**/
-
+		
+		SStar sun = new SStar(new Point(40,40), 25, 8);
+		sun.addAttributes(new SelectionAttributes());
+		sun.addAttributes(new ColorAttributes(true, false, Color.YELLOW, Color.BLACK));
+		sun.addAttributes(new RunAttributes());
+		Editor.model.add(sun);
 	}
 
 	public static void main(String[] args) {

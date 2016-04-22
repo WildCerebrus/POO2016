@@ -26,10 +26,14 @@ public class ShapesView extends View {
 			return;
 		model.accept(this.draftman);
 	}
-
+	public ShapeDraftman getDraftman() {
+		return this.draftman;
+	}
 	// Association du Controller avec la vue
 	public Controller defaultController(Object model) {
 		return new ShapesController(model);
 	}
-
+	public void invalidate() {
+		this.paintImmediately(getBounds());
+	}
 }

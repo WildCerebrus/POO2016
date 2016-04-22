@@ -2,11 +2,13 @@ package graphics.shapes.ui;
 
 import graphics.shapes.SCollection;
 import graphics.shapes.SRectangle;
+import graphics.shapes.SSatellite;
 import graphics.shapes.SStar;
 import graphics.shapes.SText;
 import graphics.shapes.ShapeVisitor;
 import graphics.shapes.attributes.ColorAttributes;
 import graphics.shapes.attributes.FontAttributes;
+import graphics.shapes.attributes.RunAttributes;
 import graphics.shapes.attributes.SelectionAttributes;
 import graphics.shapes.SCircle;
 
@@ -60,6 +62,30 @@ public class ShapeDraftman implements ShapeVisitor {
 		if (sa.isSelected())
 			this.selectedShape(r.getBounds());
 	}
+	
+	public void visitSatellite(SSatellite s) {
+		Rectangle rect = s.getBounds();
+		ColorAttributes ca = (ColorAttributes) s.getAttributes(ColorAttributes.ID);
+		SelectionAttributes sa = (SelectionAttributes) s.getAttributes(SelectionAttributes.ID);
+		RunAttributes ra = (RunAttributes) s.getAttributes(RunAttributes.ID);
+		
+		if(ca==null) ca = color;
+		
+		if(ca.filled) {
+			g.setColor(ca.filledColor);
+			g.fillRect(rect.x, rect.y, rect.width, rect.height);
+		}
+
+		if (ca.stroked) {
+			g.setColor(ca.strokedColor);
+			g.drawRect(rect.x, rect.y, rect.width, rect.height);
+		}
+		
+		if(sa.isSelected()) {
+			this.selectedShape(s.getBounds());
+			ra.setRun(false);
+		}
+	}
 
 	public void visitCircle(SCircle c) {
 		Rectangle rect = c.getBounds();
@@ -90,6 +116,7 @@ public class ShapeDraftman implements ShapeVisitor {
 		Rectangle rect = s.getBounds();
 		ColorAttributes ca = (ColorAttributes) s.getAttributes(ColorAttributes.ID);
 		SelectionAttributes sa = (SelectionAttributes) s.getAttributes(SelectionAttributes.ID);
+		RunAttributes ra = (RunAttributes) s.getAttributes(RunAttributes.ID);
 		int state = s.renew();
 		int i;
 		if(ca==null) ca = color;
@@ -105,7 +132,10 @@ public class ShapeDraftman implements ShapeVisitor {
 			g.setColor(ca.strokedColor);
 			g.drawOval(rect.x, rect.y, rect.width, rect.height);
 		}
-		if(sa.isSelected()) this.selectedShape(s.getBounds());
+		if(sa.isSelected()) {
+			this.selectedShape(s.getBounds());
+			ra.setRun(false);
+		}
 	}
 
 	public void visitText(SText t) {

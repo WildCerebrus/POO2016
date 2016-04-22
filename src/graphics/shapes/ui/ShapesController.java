@@ -4,6 +4,7 @@ import graphics.shapes.SCollection;
 import graphics.shapes.Shape;
 import graphics.shapes.attributes.SelectionAttributes;
 import graphics.ui.Controller;
+import graphics.shapes.ui.ShapesView;
 
 import java.awt.Point;
 import java.awt.event.KeyEvent;
@@ -77,7 +78,6 @@ public class ShapesController extends Controller {
 		else
 			System.out.println(this.getTarget(e));
 		// else System.out.println(this.getTarget());
-		this.getView().invalidate();
 	}
 
 	public void mousePressed(MouseEvent e) {
@@ -100,6 +100,7 @@ public class ShapesController extends Controller {
 					.get(SelectionAttributes.ID))).isSelected())
 				System.out.println(s);
 		}
+		((ShapesView) this.getView()).invalidate();
 	}
 
 	public void mouseReleased(MouseEvent e) {
