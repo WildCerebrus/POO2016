@@ -1,4 +1,4 @@
-package graphics.ui;
+package src.graphics.ui;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

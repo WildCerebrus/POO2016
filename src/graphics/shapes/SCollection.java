@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class SCollection extends Shape {
+
 	private List<Shape> shapes = new ArrayList<Shape>();
 	private Point loc = new Point(0,0);
 

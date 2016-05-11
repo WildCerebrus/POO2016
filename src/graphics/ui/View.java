@@ -1,4 +1,4 @@
-package graphics.ui;
+package src.graphics.ui;
 
 import javax.swing.JPanel;
 

@@ -1,12 +1,12 @@
-package graphics.shapes.ui;
+package src.graphics.shapes.ui;
 
-import graphics.shapes.SCircle;
-import graphics.shapes.SCollection;
-import graphics.shapes.SRectangle;
-import graphics.shapes.SText;
-import graphics.shapes.attributes.ColorAttributes;
-import graphics.shapes.attributes.FontAttributes;
-import graphics.shapes.attributes.SelectionAttributes;
+import src.graphics.shapes.SCircle;
+import src.graphics.shapes.SCollection;
+import src.graphics.shapes.SRectangle;
+import src.graphics.shapes.SText;
+import src.graphics.shapes.attributes.ColorAttributes;
+import src.graphics.shapes.attributes.FontAttributes;
+import src.graphics.shapes.attributes.SelectionAttributes;
 
 import java.awt.Color;
 import java.awt.Dimension;

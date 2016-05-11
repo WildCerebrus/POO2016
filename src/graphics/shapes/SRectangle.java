@@ -1,8 +1,9 @@
-package graphics.shapes;
+package src.graphics.shapes;
 
 import java.awt.Point;
 import java.awt.Rectangle;
-
+//Faire un toString
+//Pour getBounds,faire un clone (cela evite les problemes avec la reference de l'objet)
 
 public class SRectangle extends Shape {
 
@@ -17,7 +18,9 @@ public class SRectangle extends Shape {
 	}
 
 	public Point getLoc() {
-		return rect.getLocation(); 
+		return rect.getLocation(); // Retourne un point sur la position du
+									// rectangle
+									//le coin supérieur gauche
 	}
 
 	public void setLoc(Point p) {
@@ -25,8 +28,8 @@ public class SRectangle extends Shape {
 		this.rect.y=p.y;
 	}
 
-	public void translate(int dx, int dy) {
-		this.rect.translate(dx,dy);
+	public void translate(int x, int y) {
+		this.rect.translate(x, y);
 	}
 
 	public Rectangle getBounds() {
