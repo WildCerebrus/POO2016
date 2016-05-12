@@ -32,38 +32,42 @@ public class Controller implements MouseListener, MouseMotionListener,
 	}
 
 	public void mousePressed(MouseEvent e) {
-		System.out.println("press");
-		System.out.println(e);
+		/*System.out.println("press");
+		System.out.println(e);*/
+		this.view.invalidate();
 	}
 
 	public void mouseReleased(MouseEvent e) {
-		System.out.println("release");
-		System.out.println(e);
+		/*System.out.println("release");
+		System.out.println(e);*/
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		System.out.println("click");
-		System.out.println(e);
+		/*System.out.println("click");
+		System.out.println(e);*/
 	}
 
 	public void mouseEntered(MouseEvent e) {
-		System.out.println("enter");
-		System.out.println(e);
+		/*System.out.println("enter");
+		System.out.println(e);*/
 	}
 
 	public void mouseExited(MouseEvent e) {
-		System.out.println("exit");
-		System.out.println(e);
+		/*System.out.println("exit");
+		System.out.println(e);*/
 	}
 
 	public void mouseMoved(MouseEvent evt) {
+		/*System.out.println("move");
+		System.out.println(evt);*/
 		System.out.println("move");
-		System.out.println(evt);
+		this.view.invalidate();
+		this.view.repaint();
 	}
 
 	public void mouseDragged(MouseEvent evt) {
-		System.out.println("drag");
-		System.out.println(evt);
+		/*System.out.println("drag");
+		System.out.println(evt);*/
 	}
 
 	public void keyTyped(KeyEvent evt) {

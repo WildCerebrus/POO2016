@@ -114,16 +114,11 @@ public class ShapeDraftman implements ShapeVisitor {
 	
 	public void visitStar(SStar s) {
 		Rectangle rect = s.getBounds();
+		s.renew();
 		ColorAttributes ca = (ColorAttributes) s.getAttributes(ColorAttributes.ID);
 		SelectionAttributes sa = (SelectionAttributes) s.getAttributes(SelectionAttributes.ID);
 		RunAttributes ra = (RunAttributes) s.getAttributes(RunAttributes.ID);
-		int state = s.renew();
-		int i;
 		if(ca==null) ca = color;
-		for(i=0;i<state;i++) {
-			ca.filledColor=ca.filledColor.brighter();
-			ca.strokedColor=ca.strokedColor.darker();
-		}
 		if(ca.filled) {
 			g.setColor(ca.filledColor);
 			g.fillOval(rect.x, rect.y, rect.width, rect.height);

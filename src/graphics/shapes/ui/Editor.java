@@ -17,8 +17,8 @@ import java.util.Scanner;
 
 import javax.swing.JFrame;
 
-@SuppressWarnings("serial")
-//Oubli du SerialVersionUid dans une classe d�clar�e Serializable
+@SuppressWarnings({ "serial", "unused" })
+
 public class Editor extends JFrame {
 	
 	ShapesView sview;
@@ -78,7 +78,7 @@ public class Editor extends JFrame {
 		sc.add(c);
 		Editor.model.add(sc);/**/
 		
-		SStar sun = new SStar(new Point(40,40), 25, 8);
+		SStar sun = new SStar(new Point(40,40), 25);
 		sun.addAttributes(new SelectionAttributes());
 		sun.addAttributes(new ColorAttributes(true, false, Color.YELLOW, Color.BLACK));
 		sun.addAttributes(new RunAttributes());

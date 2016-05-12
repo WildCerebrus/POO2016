@@ -35,5 +35,6 @@ public class ShapesView extends View {
 	}
 	public void invalidate() {
 		this.paintImmediately(getBounds());
+		System.out.println("invalidate2");
 	}
 }

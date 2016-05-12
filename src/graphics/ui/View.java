@@ -1,6 +1,8 @@
 package graphics.ui;
 
 import javax.swing.JPanel;
+import graphics.shapes.SCollection;
+import graphics.shapes.ui.ShapesView;
 
 @SuppressWarnings("serial")
 // oubli du SerialVersionUid dans une classe déclarée Serializable
@@ -34,5 +36,13 @@ public abstract class View extends JPanel {
 	final public Controller getController() {
 		return this.controller;
 	}
-
+	public void invalidate() {
+		this.paintImmediately(getBounds());
+		((SCollection) this.model).accept(((ShapesView) this).getDraftman());
+		System.out.println("invalidate");
+	}
+	public void repaint() {
+		super.repaint();
+		System.out.println("repaint");
+	}
 }
