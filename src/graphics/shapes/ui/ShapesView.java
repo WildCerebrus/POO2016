@@ -1,8 +1,8 @@
-package src.graphics.shapes.ui; //redefinir une fonction specifique (voir Graphics)
+package graphics.shapes.ui; //redefinir une fonction specifique (voir Graphics)
 
-import src.graphics.shapes.Shape;
-import src.graphics.ui.Controller;
-import src.graphics.ui.View;
+import graphics.shapes.Shape;
+import graphics.ui.Controller;
+import graphics.ui.View;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;

@@ -1,6 +1,6 @@
-package src.graphics.shapes;
+package graphics.shapes;
 
-import src.graphics.shapes.attributes.*;
+import graphics.shapes.attributes.*;
 
 import java.awt.*;
 import java.util.*;

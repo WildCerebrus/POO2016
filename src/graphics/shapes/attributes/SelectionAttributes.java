@@ -1,4 +1,4 @@
-package src.graphics.shapes.attributes;
+package graphics.shapes.attributes;
 
 public class SelectionAttributes extends Attributes {
 

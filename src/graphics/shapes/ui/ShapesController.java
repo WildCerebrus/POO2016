@@ -1,14 +1,15 @@
-package src.graphics.shapes.ui;
+package graphics.shapes.ui;
 
-import src.graphics.shapes.SCollection;
-import src.graphics.shapes.Shape;
-import src.graphics.shapes.attributes.SelectionAttributes;
-import src.graphics.ui.Controller;
+import graphics.shapes.Shape;
+import graphics.shapes.attributes.SelectionAttributes;
+import graphics.ui.Controller;
 
 import java.awt.Point;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.util.Iterator;
+
+import graphics.shapes.SCollection;
 
 public class ShapesController extends Controller {
 	

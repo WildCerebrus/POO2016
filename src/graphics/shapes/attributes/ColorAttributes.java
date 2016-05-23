@@ -1,4 +1,4 @@
-package src.graphics.shapes.attributes;
+package graphics.shapes.attributes;
 
 import java.awt.Color; //Pour les booleens de couleurs
 

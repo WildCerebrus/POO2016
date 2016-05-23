@@ -1,6 +1,11 @@
-package src.graphics.shapes;
+package graphics.shapes;
 
-public class SText {
+import java.awt.Point;
+import java.awt.Rectangle;
+
+import graphics.shapes.attributes.FontAttributes;
+
+public class SText extends Shape{
 	private String text;
 	private Point loc;
 

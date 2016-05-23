@@ -1,6 +1,6 @@
-package src.graphics.shapes;
+package graphics.shapes;
 
-public class ShapeVisitor {
+public interface ShapeVisitor {
 	public abstract void visitRectangle(SRectangle sr);
 
 	public abstract void visitCircle(SCircle sc);

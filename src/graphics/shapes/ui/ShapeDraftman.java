@@ -1,18 +1,19 @@
-package src.graphics.shapes.ui;
+package graphics.shapes.ui;
 
-import src.graphics.shapes.SCollection;
-import src.graphics.shapes.SRectangle;
-import src.graphics.shapes.SText;
-import src.graphics.shapes.ShapeVisitor;
-import src.graphics.shapes.attributes.ColorAttributes;
-import src.graphics.shapes.attributes.FontAttributes;
-import src.graphics.shapes.attributes.SelectionAttributes;
-import src.graphics.shapes.SCircle;
+import graphics.shapes.SRectangle;
+import graphics.shapes.SText;
+import graphics.shapes.ShapeVisitor;
+import graphics.shapes.attributes.ColorAttributes;
+import graphics.shapes.attributes.FontAttributes;
+import graphics.shapes.attributes.SelectionAttributes;
+import graphics.shapes.SCircle;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Rectangle;
+
+import graphics.shapes.SCollection;
 
 public class ShapeDraftman implements ShapeVisitor {
 
