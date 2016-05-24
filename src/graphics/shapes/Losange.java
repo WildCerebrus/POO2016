@@ -5,12 +5,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+@SuppressWarnings("serial")
 public class Losange extends JApplet  {
 	  public void init(){
 			setContentPane(new Dessin());
 	  }
 	}
 
+	@SuppressWarnings("serial")
 	class Dessin extends JPanel {
 	  int theta = 45, delta =45;
 	  public void paintComponent(Graphics g) {

@@ -8,4 +8,6 @@ public interface ShapeVisitor {
 	public abstract void visitText(SText st);
 
 	public abstract void visitCollection(SCollection sco);
+
+	public abstract void visitLosange(SLosange sl);
 }

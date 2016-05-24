@@ -14,7 +14,9 @@ import java.awt.Point;
 import javax.swing.JFrame;
 
 import graphics.shapes.SCollection;
+import graphics.shapes.SLosange;
 
+@SuppressWarnings("serial")
 public class Editor extends JFrame
 {
 	ShapesView sview;
@@ -72,6 +74,11 @@ public class Editor extends JFrame
 		c.addAttributes(new SelectionAttributes());
 		sc.add(c);
 		this.model.add(sc);
+		
+		SLosange l = new SLosange(new Point(200,50),40,10);
+		l.addAttributes(new ColorAttributes(true,true,Color.BLACK,Color.GREEN));
+		l.addAttributes(new SelectionAttributes());
+		this.model.add(l);
 	}
 	
 	public static void main(String[] args)
