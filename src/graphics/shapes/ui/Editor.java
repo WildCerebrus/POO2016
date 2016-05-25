@@ -1,7 +1,6 @@
 package graphics.shapes.ui;
 
 import graphics.shapes.SCircle;
-import graphics.shapes.SCollection;
 import graphics.shapes.SRectangle;
 import graphics.shapes.SText;
 import graphics.shapes.attributes.ColorAttributes;
@@ -14,6 +13,10 @@ import java.awt.Point;
 
 import javax.swing.JFrame;
 
+import graphics.shapes.SCollection;
+import graphics.shapes.SLosange;
+
+@SuppressWarnings("serial")
 public class Editor extends JFrame
 {
 	ShapesView sview;
@@ -71,6 +74,11 @@ public class Editor extends JFrame
 		c.addAttributes(new SelectionAttributes());
 		sc.add(c);
 		this.model.add(sc);
+		
+		SLosange l = new SLosange(new Point(200,50),40,20);
+		l.addAttributes(new ColorAttributes(true,true,Color.GREEN,Color.BLACK));
+		l.addAttributes(new SelectionAttributes());
+		this.model.add(l);
 	}
 	
 	public static void main(String[] args)

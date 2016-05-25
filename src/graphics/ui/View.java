@@ -3,6 +3,7 @@ package graphics.ui;
 import javax.swing.JPanel;
 
 
+@SuppressWarnings("serial")
 public abstract class View extends JPanel
 {
 	private Object model;
