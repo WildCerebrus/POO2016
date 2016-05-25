@@ -75,8 +75,8 @@ public class Editor extends JFrame
 		sc.add(c);
 		this.model.add(sc);
 		
-		SLosange l = new SLosange(new Point(200,50),40,10);
-		l.addAttributes(new ColorAttributes(true,true,Color.BLACK,Color.GREEN));
+		SLosange l = new SLosange(new Point(200,50),40,20);
+		l.addAttributes(new ColorAttributes(true,true,Color.GREEN,Color.BLACK));
 		l.addAttributes(new SelectionAttributes());
 		this.model.add(l);
 	}

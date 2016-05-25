@@ -12,8 +12,6 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.Shape;
-
 import graphics.shapes.SCollection;
 import graphics.shapes.SLosange;
 
@@ -144,12 +142,12 @@ public class ShapeDraftman implements ShapeVisitor {
 		// Il faut remplir le fond avant de dessiner le contour
 		if (ca.filled) {
 			g.setColor(ca.filledColor);
-			g.fill(sl);
+			g.fillPolygon(sl.getLos());
 		}
 
 		if (ca.stroked) {
 			g.setColor(ca.strokedColor);
-			g.draw(sl);
+			g.drawPolygon(sl.getLos());
 		}
 
 		if (sa.isSelected())
