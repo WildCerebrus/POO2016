@@ -1,4 +1,4 @@
-/*package graphics.shapes;
+package graphics.shapes;
 
 
 import javax.swing.*;
@@ -45,4 +45,3 @@ public class Losange extends JApplet  {
 		}
 	}
 
-*/
