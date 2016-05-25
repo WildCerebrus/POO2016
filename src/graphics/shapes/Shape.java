@@ -1,9 +1,9 @@
 package graphics.shapes;
 
-import graphics.shapes.attributes.*;
-
 import java.awt.*;
 import java.util.*;
+
+import graphics.shapes.attributes.Attributes;
 
 public abstract class Shape {
 
